@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Frame2 extends JFrame{
     private Container cp;
@@ -14,6 +15,7 @@ public class Frame2 extends JFrame{
     private JMenuItem jmiexit=new JMenuItem("Exit");
     private JMenuItem jmioxgame=new JMenuItem("oxgame");
     private JMenuItem jmiencryption=new JMenuItem("encryption");
+    private JMenuItem jmiFileDecrypt=new JMenuItem("FileDecrypt");
     public Frame2(){
         ex2();
     }
@@ -33,6 +35,7 @@ public class Frame2 extends JFrame{
         jmF.add(jmiexit);
         jmG.add(jmioxgame);
         jmT.add(jmiencryption);
+        jmT.add(jmiFileDecrypt);
         jmiexit.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -52,6 +55,14 @@ public class Frame2 extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 encryption ept=new encryption(Frame2.this);
                 ept.setVisible(true);
+                Frame2.this.setVisible(false);
+            }
+        });
+        jmiFileDecrypt.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                FileDecrypt fid = new FileDecrypt(Frame2.this);
+                fid.setVisible(true);
                 Frame2.this.setVisible(false);
             }
         });
