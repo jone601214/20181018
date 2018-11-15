@@ -21,7 +21,6 @@ public class movegame extends JFrame {
         init();
     }
     private void init() {
-        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         this.addWindowListener(new WindowAdapter() {
             @Override
