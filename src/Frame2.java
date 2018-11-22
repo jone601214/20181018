@@ -19,6 +19,7 @@ public class Frame2 extends JFrame{
     private JMenuItem jmiDigitalTimer=new JMenuItem("DigitalTimer");
     private JMenuItem jmimovegame=new JMenuItem("movegame");
     private JMenuItem jmimovegame2=new JMenuItem("movegame2");
+    private JMenuItem jmiMultiobjects=new JMenuItem("Multiobjects");
 
     public Frame2(){
         ex2();
@@ -40,9 +41,11 @@ public class Frame2 extends JFrame{
         jmG.add(jmioxgame);
         jmG.add(jmimovegame);
         jmG.add(jmimovegame2);
+        jmG.add(jmiMultiobjects);
         jmT.add(jmiencryption);
         jmT.add(jmiFileDecrypt);
         jmT.add(jmiDigitalTimer);
+
         jmiexit.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -95,6 +98,14 @@ public class Frame2 extends JFrame{
                 movegame2 mov = new movegame2(Frame2.this);
                 mov.setVisible(true);
                 Frame2.this.setVisible(false);
+            }
+        });
+        jmiMultiobjects.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+//                Multiobjects mov = new Multiobjects(Frame2.this);
+//                mov.setVisible(true);
+//                Frame2.this.setVisible(false);
             }
         });
         jmiexit.addActionListener(new AbstractAction() {
