@@ -20,6 +20,7 @@ public class Frame2 extends JFrame{
     private JMenuItem jmimovegame=new JMenuItem("movegame");
     private JMenuItem jmimovegame2=new JMenuItem("movegame2");
     private JMenuItem jmiMultiobjects=new JMenuItem("Multiobjects");
+    private JMenuItem jmilinechat=new JMenuItem("linechat");
 
     public Frame2(){
         ex2();
@@ -45,6 +46,7 @@ public class Frame2 extends JFrame{
         jmT.add(jmiencryption);
         jmT.add(jmiFileDecrypt);
         jmT.add(jmiDigitalTimer);
+        jmT.add(jmilinechat);
 
         jmiexit.addActionListener(new AbstractAction() {
             @Override
@@ -106,6 +108,14 @@ public class Frame2 extends JFrame{
 //                Multiobjects mov = new Multiobjects(Frame2.this);
 //                mov.setVisible(true);
 //                Frame2.this.setVisible(false);
+            }
+        });
+        jmilinechat.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                linechat lin=new linechat(Frame2.this);
+                lin.setVisible(true);
+                Frame2.this.setVisible(false);
             }
         });
         jmiexit.addActionListener(new AbstractAction() {
